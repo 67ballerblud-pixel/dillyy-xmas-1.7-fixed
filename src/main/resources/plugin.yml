@@ -1,0 +1,23 @@
+name: DillyyXmas
+version: 1.7
+main: me.fix.xmas.Xmas
+api-version: "1.21"
+commands:
+  xmas:
+    description: Christmas info and admin tools
+    usage: /xmas [music|catalog|streak|sleigh|snow|enchants|present|show|give|book|enchant|boss|mailbox|timezone|reset|reload]
+    aliases: [christmas]
+  advent:
+    description: Open the advent calendar
+    usage: /advent
+permissions:
+  xmas.use:
+    default: true
+  xmas.mailbox.use:
+    description: Use Christmas Mailboxes (send and collect gifts)
+    default: true
+  xmas.music:
+    description: Get Christmas music discs with /xmas music
+    default: op
+  xmas.admin:
+    default: op

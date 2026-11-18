@@ -1,0 +1,332 @@
+# Paste this block into UltimateDonutSmp's plugins/UltimateDonutSmp/crates.yml
+# directly UNDER the existing crates (same indentation as "gold:" - two spaces, inside CRATES:).
+# Then run /crate reload.
+# Requires DillyyXmas (the rewards use /xmas give). {player} is replaced by the crate plugin.
+
+  christmas:
+    ENABLED: true
+    OPEN-TYPE: GACHA
+    DISPLAY:
+      MATERIAL: RED_SHULKER_BOX
+      DISPLAY-NAME: '&c&lChristmas &a&lCrate'
+      LORE:
+      - '&7Keys: &f{keys}'
+      - '&aClick to open and roll a reward.'
+    KEY-ITEM:
+      MATERIAL: TRIPWIRE_HOOK
+      DISPLAY-NAME: '&c&lChristmas &a&lkey'
+      LORE:
+      - '&7Opens the &cChristmas &aCrate&7.'
+    PERMISSION: ''
+    BROADCAST-ON-CLAIM: true
+    MENU:
+      OPEN-TITLE: '&8Christmas Crate'
+      CONFIRM-TITLE: '&8Confirm Christmas Reward'
+      SIZE: 36
+      FILLER: GREEN_STAINED_GLASS_PANE
+      BACK-SLOT: 35
+      BACK-BUTTON:
+        MATERIAL: BARRIER
+        DISPLAY-NAME: '&cBack'
+        LORE:
+        - '&7Return to the crate list.'
+    REWARDS:
+      santa_hat:
+        SLOT: 10
+        DISPLAY:
+          MATERIAL: LEATHER_HELMET
+          DISPLAY-NAME: '&c&lSanta Hat'
+          LORE:
+          - '&7Protection IV, Unbreaking III, Respiration III'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} santa_hat
+      reindeer_boots:
+        SLOT: 11
+        DISPLAY:
+          MATERIAL: LEATHER_BOOTS
+          DISPLAY-NAME: '&6&lReindeer Boots'
+          LORE:
+          - '&7Protection IV, Feather Falling IV, Depth Strider III'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} reindeer_boots
+      candy_cane_sword:
+        SLOT: 12
+        DISPLAY:
+          MATERIAL: DIAMOND_SWORD
+          DISPLAY-NAME: '&c&lCandy &f&lCane &c&lBlade'
+          LORE:
+          - '&7Sharpness IV, Looting III, Unbreaking III'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} candy_cane_sword
+      candy_cane_pickaxe:
+        SLOT: 13
+        DISPLAY:
+          MATERIAL: DIAMOND_PICKAXE
+          DISPLAY-NAME: '&c&lCandy &f&lCane &c&lPickaxe'
+          LORE:
+          - '&7Efficiency V, Fortune III, Unbreaking III'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} candy_cane_pickaxe
+      frost_wand:
+        SLOT: 14
+        DISPLAY:
+          MATERIAL: BLAZE_ROD
+          DISPLAY-NAME: '&b&lFrost Wand'
+          LORE:
+          - '&7Right-click to fire an ice bolt that slows enemies.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} frost_wand
+      christmas_money:
+        SLOT: 15
+        DISPLAY:
+          MATERIAL: GOLD_INGOT
+          DISPLAY-NAME: '&a$25,000,000'
+          LORE:
+          - '&7Christmas bonus!'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - addmoney {player} 25000000
+      christmas_shards:
+        SLOT: 16
+        DISPLAY:
+          MATERIAL: AMETHYST_SHARD
+          DISPLAY-NAME: '&d750 Shards'
+          LORE:
+          - '&7Christmas bonus!'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - addshards {player} 750
+      gingerbread_chestplate:
+        SLOT: 17
+        DISPLAY:
+          MATERIAL: LEATHER_CHESTPLATE
+          DISPLAY-NAME: '&6&lGingerbread Plate'
+          LORE:
+          - '&7Crunch: reflects some damage you take.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} gingerbread_chestplate
+      snow_globe:
+        SLOT: 18
+        DISPLAY:
+          MATERIAL: PRISMARINE_CRYSTALS
+          DISPLAY-NAME: '&b&lSnow Globe'
+          LORE:
+          - '&7Right-click: blizzard freezes everything nearby.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} snow_globe
+      jingle_bells:
+        SLOT: 19
+        DISPLAY:
+          MATERIAL: BELL
+          DISPLAY-NAME: '&6&lJingle Bells'
+          LORE:
+          - '&7Right-click: Speed, Jump Boost and Haste.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} jingle_bells
+      holly_bow:
+        SLOT: 20
+        DISPLAY:
+          MATERIAL: BOW
+          DISPLAY-NAME: '&2&lHolly Bow'
+          LORE:
+          - '&7Arrows make targets glow and slow them.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} holly_bow
+      book_lifesteal:
+        SLOT: 21
+        DISPLAY:
+          MATERIAL: ENCHANTED_BOOK
+          DISPLAY-NAME: '&d&lLifesteal III Book'
+          LORE:
+          - '&7Heal a share of the damage you deal.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas book {player} lifesteal 3
+      book_frostbite:
+        SLOT: 22
+        DISPLAY:
+          MATERIAL: ENCHANTED_BOOK
+          DISPLAY-NAME: '&d&lFrostbite III Book'
+          LORE:
+          - '&7Hits can freeze and slow your target.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas book {player} frostbite 3
+      book_vein_miner:
+        SLOT: 23
+        DISPLAY:
+          MATERIAL: ENCHANTED_BOOK
+          DISPLAY-NAME: '&d&lVein Miner III Book'
+          LORE:
+          - '&7Sneak-mine an ore to break the whole vein.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas book {player} vein_miner 3
+      book_auto_smelt:
+        SLOT: 24
+        DISPLAY:
+          MATERIAL: ENCHANTED_BOOK
+          DISPLAY-NAME: '&d&lAuto Smelt Book'
+          LORE:
+          - '&7Ores drop as smelted ingots.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas book {player} auto_smelt 1
+      north_star:
+        SLOT: 25
+        DISPLAY:
+          MATERIAL: NETHER_STAR
+          DISPLAY-NAME: '&e&lNorth Star'
+          LORE:
+          - '&7Right-click: stars rain down on every enemy nearby.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} north_star
+      sleigh_launcher:
+        SLOT: 26
+        DISPLAY:
+          MATERIAL: FIREWORK_ROCKET
+          DISPLAY-NAME: '&c&lSleigh &6&lLauncher'
+          LORE:
+          - '&7Right-click: rocket forward in a firework trail.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} sleigh_launcher
+      eggnog_flask:
+        SLOT: 27
+        DISPLAY:
+          MATERIAL: HONEY_BOTTLE
+          DISPLAY-NAME: '&f&lEggnog &6&lFlask'
+          LORE:
+          - '&7Right-click: Strength, Regeneration and Absorption.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} eggnog_flask
+      yule_log_axe:
+        SLOT: 28
+        DISPLAY:
+          MATERIAL: NETHERITE_AXE
+          DISPLAY-NAME: '&6&lYule Log &c&lAxe'
+          LORE:
+          - '&7Hits can erupt in flame around the target.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} yule_log_axe
+      mistletoe_kiss:
+        SLOT: 29
+        DISPLAY:
+          MATERIAL: SPORE_BLOSSOM
+          DISPLAY-NAME: '&a&lMistletoe &c&lKiss'
+          LORE:
+          - '&7Right-click a player to heal you both.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} mistletoe_kiss
+      ice_skates:
+        SLOT: 30
+        DISPLAY:
+          MATERIAL: LEATHER_BOOTS
+          DISPLAY-NAME: '&b&lIce Skates'
+          LORE:
+          - '&7Fast on ice, freezes water as you walk.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} ice_skates
+      snowball_cannon:
+        SLOT: 31
+        DISPLAY:
+          MATERIAL: DISPENSER
+          DISPLAY-NAME: '&f&lSnowball &b&lCannon'
+          LORE:
+          - '&7Right-click: rapid burst of snowballs.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} snowball_cannon
+      frosty_coal:
+        SLOT: 32
+        DISPLAY:
+          MATERIAL: COAL
+          DISPLAY-NAME: '&f&lFrosty&8&l Magic Coal'
+          LORE:
+          - '&7Right-click: summon snow golems to fight for you.'
+          AMOUNT: 1
+          ENCHANTMENTS: []
+        GRANT:
+          TYPE: COMMAND
+          COMMANDS:
+          - xmas give {player} frosty_coal

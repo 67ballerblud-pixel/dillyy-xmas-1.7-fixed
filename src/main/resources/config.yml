@@ -1,0 +1,431 @@
+# DillyyXmas config. Rewards are console commands; %player% is replaced with the player's name.
+prefix: "&c&l❄ &a&lXmas &c&l» &r"
+timezone: "America/Chicago"      # used for the advent calendar dates
+
+advent:
+  title: "&c&lAdvent Calendar"
+  test-mode: false               # true = every door can be opened right now (for testing)
+  late-claim: true               # true = missed days can still be claimed later in December
+  join-reminder: true
+  timezone-lock: true            # players can pick their timezone once (stops claiming days early); staff can change it with /xmas timezone
+  # To give crate keys use your plugin's key command (check /crate usage in-game), then add it as a line here.
+  days:
+    1:
+      display: "&a$250,000"
+      commands:
+        - "addmoney %player% 250000"
+    2:
+      display: "&e20 Shards"
+      commands:
+        - "addshards %player% 20"
+    3:
+      display: "&a$750,000"
+      commands:
+        - "addmoney %player% 750000"
+    4:
+      display: "&e40 Shards"
+      commands:
+        - "addshards %player% 40"
+    5:
+      display: "&d$2,500,000 + 100 Shards"
+      commands:
+        - "addmoney %player% 2500000"
+        - "addshards %player% 100"
+    6:
+      display: "&e60 Shards"
+      commands:
+        - "addshards %player% 60"
+    7:
+      display: "&a$1,750,000"
+      commands:
+        - "addmoney %player% 1750000"
+    8:
+      display: "&e80 Shards"
+      commands:
+        - "addshards %player% 80"
+    9:
+      display: "&a$2,250,000"
+      commands:
+        - "addmoney %player% 2250000"
+    10:
+      display: "&d$5,000,000 + 200 Shards"
+      commands:
+        - "addmoney %player% 5000000"
+        - "addshards %player% 200"
+    11:
+      display: "&a$2,750,000"
+      commands:
+        - "addmoney %player% 2750000"
+    12:
+      display: "&e120 Shards"
+      commands:
+        - "addshards %player% 120"
+    13:
+      display: "&a$3,250,000"
+      commands:
+        - "addmoney %player% 3250000"
+    14:
+      display: "&e140 Shards"
+      commands:
+        - "addshards %player% 140"
+    15:
+      display: "&d$7,500,000 + 300 Shards"
+      commands:
+        - "addmoney %player% 7500000"
+        - "addshards %player% 300"
+    16:
+      display: "&e160 Shards"
+      commands:
+        - "addshards %player% 160"
+    17:
+      display: "&a$4,250,000"
+      commands:
+        - "addmoney %player% 4250000"
+    18:
+      display: "&e180 Shards"
+      commands:
+        - "addshards %player% 180"
+    19:
+      display: "&a$4,750,000"
+      commands:
+        - "addmoney %player% 4750000"
+    20:
+      display: "&d$10,000,000 + 400 Shards"
+      commands:
+        - "addmoney %player% 10000000"
+        - "addshards %player% 400"
+    21:
+      display: "&a$5,250,000"
+      commands:
+        - "addmoney %player% 5250000"
+    22:
+      display: "&e220 Shards"
+      commands:
+        - "addshards %player% 220"
+    23:
+      display: "&a$5,750,000"
+      commands:
+        - "addmoney %player% 5750000"
+    24:
+      display: "&e240 Shards"
+      commands:
+        - "addshards %player% 240"
+    25:
+      display: "&6&l$50,000,000 + 2,500 Shards"
+      commands:
+        - "addmoney %player% 50000000"
+        - "addshards %player% 2500"
+
+presents:
+  enabled: true
+  world: "world"                 # overworld recommended
+  center-x: 0                    # centre of the area presents spawn around
+  center-z: 0
+  min-radius: 50
+  max-radius: 500
+  interval-minutes: 20
+  max-active: 3
+  lifetime-minutes: 10
+  min-online: 1
+  hint-rounding: 100             # coordinates in the announcement are rounded to this (0 = exact)
+  materials: [RED_SHULKER_BOX, GREEN_SHULKER_BOX, WHITE_SHULKER_BOX]
+  announce-message: "&c&l[&a&lXmas&c&l] &fA &c&lPresent &fappeared in the wild near &e{where}&f! Find it and right-click it!"
+  found-message: "&c&l[&a&lXmas&c&l] &e{player} &ffound a present and got &a{reward}&f!"
+  rewards:
+    - weight: 50
+      name: "&a$500,000"
+      commands: ["addmoney %player% 500000"]
+    - weight: 30
+      name: "&e$2,000,000"
+      commands: ["addmoney %player% 2000000"]
+    - weight: 15
+      name: "&d150 Shards"
+      commands: ["addshards %player% 150"]
+    - weight: 5
+      name: "&6&l$10,000,000 + 500 Shards"
+      commands: ["addmoney %player% 10000000", "addshards %player% 500"]
+    # Christmas crate keys (needs the "christmas" crate from extras/christmas-crate.yml in your crates.yml)
+    - weight: 25
+      name: "&c&lChristmas &a&lCrate Key"
+      commands: ["crate key %player% christmas 1"]
+    - weight: 5
+      name: "&c&l3 Christmas &a&lCrate Keys"
+      commands: ["crate key %player% christmas 3"]
+
+snow:
+  enabled: true
+  worlds: ["world"]
+  only-near-spawn: true
+  spawn-radius: 150
+  density: 25                    # particles per burst
+  twinkle: true                  # sparkles + red/green string-light flecks drifting down
+
+# ---------------- festive extras (1.4) ----------------
+auras:
+  enabled: true                  # halos, trails, spirals and sparkles around the Christmas items
+festive:
+  join-title: true               # "Merry Christmas" title + bell jingle with a countdown on join
+  tips-enabled: true
+  tip-interval-minutes: 10
+  tips:
+    - "&7Try &f/advent &7for a free gift every day until Christmas!"
+    - "&7Craft a &cChristmas Mailbox &7and mail a gift to any player."
+    - "&7Hunt the glowing &cpresents &7- look for the red and green beam in the sky!"
+    - "&7Sneak-mine ores with the &cCandy Cane Pickaxe &7to break the whole vein."
+    - "&7The &2Grinch &7drops a &aGrinch's Heart&7. Gather your friends."
+    - "&7Type &f/xmas catalog &7to browse every Christmas item."
+    - "&7Wear the Santa Hat, Gingerbread Plate and Reindeer Boots together for the &6Santa Set&7 bonus."
+    - "&7Log in every day to build a &6login streak &7and earn milestone gifts."
+    - "&7Open the &cChristmas Crate &7for the &eNorth Star&7, &6Eggnog Flask&7 and more."
+  fireworks: true                # firework show over world spawn on Dec 24 and 25
+  fireworks-always: false        # true = run the show all December (or test it)
+  firework-interval-seconds: 45
+
+# Santa's Sleigh: a particle sleigh flies over the presents.center and drops presents on the way.
+sleigh:
+  enabled: true
+  interval-minutes: 30
+  min-online: 2
+  drops: 3                       # presents dropped per flight
+  height: 40                     # blocks above the ground at the presents centre
+  max-presents: 12               # won't drop more if this many presents are already out
+  message: "&c&lSanta's Sleigh &fis flying over spawn! &7Look up - gifts are falling!"
+
+# Christmas music: /xmas music <song> gives a music disc, put it in a jukebox and it plays.
+music:
+  enabled: true
+  range: 100                     # blocks; everyone this close hears it (a sound reaches 16 blocks x volume)
+  note-particles: true
+  bell-layer: true               # built-in carols add a soft bell on top of the melody
+  # Songs from a resource pack YOU host (see CUSTOM_ITEMS.md). Each needs a sound event in the pack.
+  # custom-sounds:
+  #   all_i_want:
+  #     title: "My Custom Song"
+  #     sound: "xmas:my_song"    # the sound event name from your resource pack's sounds.json
+  #     seconds: 241             # how long the song is
+  custom-sounds: {}
+
+# Daily login streak. Rewards are console commands, %player% is replaced.
+streak:
+  enabled: true
+  daily-commands:
+    - "addmoney %player% 100000"
+  milestones:
+    3: ["addshards %player% 50"]
+    7: ["crate key %player% christmas 1"]
+    14: ["xmas give %player% eggnog_flask", "addmoney %player% 1000000"]
+    25: ["crate key %player% christmas 3", "xmas give %player% north_star"]
+
+# Timezones shown in the /advent timezone menu (max 14). Players can also type any zone: /advent timezone Europe/Paris
+timezone-options:
+  - {name: "Eastern (US/Canada)", zone: "America/New_York"}
+  - {name: "Central (US/Canada)", zone: "America/Chicago"}
+  - {name: "Mountain (US/Canada)", zone: "America/Denver"}
+  - {name: "Pacific (US/Canada)", zone: "America/Los_Angeles"}
+  - {name: "Alaska", zone: "America/Anchorage"}
+  - {name: "Hawaii", zone: "Pacific/Honolulu"}
+  - {name: "Brazil", zone: "America/Sao_Paulo"}
+  - {name: "United Kingdom", zone: "Europe/London"}
+  - {name: "Central Europe", zone: "Europe/Berlin"}
+  - {name: "Eastern Europe", zone: "Europe/Helsinki"}
+  - {name: "India", zone: "Asia/Kolkata"}
+  - {name: "China / Philippines", zone: "Asia/Shanghai"}
+  - {name: "Japan", zone: "Asia/Tokyo"}
+  - {name: "Australia (Sydney)", zone: "Australia/Sydney"}
+
+# ---------------- Christmas Mailbox ----------------
+# Players craft a Christmas Mailbox, place it down and right-click it to mail an item to ANY player who
+# has joined the server (online or offline). The gift waits in the recipient's mail until they open any
+# mailbox and claim it. Every mailbox is the same network: mail belongs to the player, not the block.
+mailbox:
+  enabled: true
+  discover-recipe-on-join: true  # unlock the recipe in the recipe book when players join
+  recipe:                        # shape rows must be the same length (max 3x3); use a space for an empty slot
+    shape: ["IDI", "IBI", "IPI"]
+    ingredients:
+      I: IRON_INGOT
+      D: RED_DYE
+      B: BARREL
+      P: PAPER
+  max-inbox: 54                  # max unclaimed gifts one player can have waiting (stops inbox spam)
+  send-cooldown-seconds: 3
+  allow-self: false              # allow mailing yourself (useful for testing)
+  confirm-before-send: true      # show a "Send this gift?" screen
+  # Sounds are vanilla sound keys (or "none")
+  send-sound: "entity.experience_orb.pickup"
+  receive-sound: "entity.player.levelup"
+  claim-sound: "entity.item.pickup"
+  # Items that cannot be mailed (Material names)
+  blacklist:
+    - BEDROCK
+    - BARRIER
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - COMMAND_BLOCK_MINECART
+    - STRUCTURE_BLOCK
+    - STRUCTURE_VOID
+    - JIGSAW
+    - LIGHT
+    - DEBUG_STICK
+    - KNOWLEDGE_BOOK
+    - SPAWNER
+    - TRIAL_SPAWNER
+    - VAULT
+
+# ---------------- custom items ----------------
+items:
+  frost-wand:
+    cooldown-ticks: 60
+    damage: 3
+    slow-seconds: 3
+  candy-cane-sword:              # every hit slows the target; sometimes a Sugar Rush (Speed II + heal)
+    sticky-seconds: 2
+    sugar-rush-chance: 0.2
+    sugar-rush-heal: 2           # health points (2 = one heart)
+  candy-cane-pickaxe:            # Haste while held; sneak-mining an ore breaks the whole vein
+    haste-amplifier: 1           # 1 = Haste II, -1 turns it off
+    vein-max: 12                 # extra blocks broken per vein
+  grinch-heart:                  # right-click: pull in + weaken everything nearby, heal yourself
+    cooldown-seconds: 45
+    radius: 7
+    damage: 6
+    weakness-seconds: 6
+    heal: 6
+  santa-hat:
+    regen-amplifier: 0           # Regeneration while worn, -1 turns it off
+    gift-chance: 0.05            # chance a monster you kill drops a gift
+  reindeer-boots:                # Speed + Jump Boost + no fall damage; sprint then sneak to dash
+    speed-amplifier: 0
+    jump-amplifier: 0
+    dash-power: 1.6
+    cooldown-seconds: 6
+  gingerbread-chestplate:        # chance to reflect part of the damage you take
+    reflect-chance: 0.25
+    reflect-percent: 0.3
+  snow-globe:                    # right-click: blizzard that freezes and slows everything nearby
+    cooldown-seconds: 40
+    radius: 7
+    damage: 2
+    slow-seconds: 4
+  jingle-bells:                  # right-click: Speed III + Jump Boost II + Haste II
+    cooldown-seconds: 60
+    seconds: 8
+  holly-bow:                     # arrows make targets glow and slow them
+    glow-seconds: 8
+    slow-seconds: 3
+  sleigh-launcher:               # right-click: rocket forward in a firework trail, no fall damage
+    cooldown-seconds: 20
+    power: 2.2
+  north-star:                    # right-click: stars fall on every enemy nearby
+    cooldown-seconds: 50
+    radius: 10
+    damage: 8
+    max-targets: 6
+  eggnog-flask:                  # right-click: Strength + Regeneration II + Absorption II
+    cooldown-seconds: 90
+    seconds: 20
+  yule-log-axe:                  # hits can erupt in flame and ignite everything nearby
+    chance: 0.25
+    radius: 3
+    damage: 4
+    burn-seconds: 4
+  mistletoe-kiss:                # right-click a player: heal you both
+    cooldown-seconds: 30
+    heal: 8                      # health points (8 = four hearts)
+  ice-skates:                    # fast on ice, Frost Walker II
+    speed-amplifier: 2
+  snowball-cannon:               # right-click: burst of snowballs
+    cooldown-seconds: 8
+    shots: 3
+    damage: 3
+  frosty-coal:                   # right-click: summon snow golems that fight for you
+    cooldown-seconds: 60
+    count: 3
+    seconds: 25
+
+# ---------------- custom enchantments ----------------
+# Players get these as books (/xmas book <player> <enchant> [level], or from the Christmas crate) and apply
+# them in an anvil. /xmas enchants lists them. Admins can also apply one directly with /xmas enchant.
+enchants:
+  lifesteal:
+    heal-per-level: 0.05         # share of damage dealt that heals you (x level)
+  frostbite:
+    chance-per-level: 0.2        # chance per hit to freeze and slow the target (x level)
+  executioner:
+    bonus-per-level: 0.15        # extra damage vs targets under 30% health (x level)
+  vein-miner:
+    per-level: 6                 # extra blocks per level when sneak-mining an ore
+  snowstorm:
+    chance-per-level: 0.15
+    radius: 3
+  grinch-curse:
+    chance-per-level: 0.2
+  jingle-stun:
+    chance-per-level: 0.08
+  holiday-bounty:
+    chance-per-level: 0.1        # chance a mob you kill drops double loot (x level)
+  frostguard:
+    chance-per-level: 0.15
+  hearth:
+    low-health: 0.4              # heal glow below this share of max health
+  gift-of-wisdom:
+    bonus-per-level: 0.25        # extra XP per level
+  timber:
+    max-logs: 48
+
+# ---------------- The Grinch (boss) ----------------
+# Start it with /xmas boss spawn (spawns where you stand), or turn on auto-spawn below.
+boss:
+  name: "&a&lThe Grinch"
+  health: 1000
+  damage: 8
+  speed: 0.28
+  scale: 2.0                     # size multiplier
+  xp: 500
+  ability-interval-seconds: 7    # stomp / snowballs / summon elves (faster when enraged)
+  stomp-damage: 6
+  snowball-damage: 3
+  coal-damage: 7                 # phase 2+: telegraphed coal bombs
+  cold-heart-damage: 4           # phase 2+: freezing shockwave
+  leap-damage: 8                 # phase 3: leap and slam
+  drain-heal-percent: 0.02       # phase 3: share of his max HP he heals per player drained
+  max-minions: 6
+  max-lifetime-minutes: 20       # he leaves if nobody kills him
+  broadcast-spawn: true
+  min-damage-to-reward: 20
+  location:                      # used by auto-spawn and /xmas boss spawn from console
+    world: "world"
+    x: 0
+    y: 100
+    z: 0
+  auto-spawn:
+    enabled: false
+    interval-minutes: 120
+    min-online: 3
+  # Everyone who deals at least min-damage-to-reward gets these:
+  participation-commands:
+    - "addmoney %player% 2000000"
+    - "addshards %player% 100"
+    # Add Christmas crate keys here once you know your crate-key command (check /crate in-game), e.g.
+    # - "crate key add %player% christmas 1"
+  # Extra rewards for the top 3 damage dealers:
+  top-commands:
+    1:
+      - "addmoney %player% 20000000"
+      - "addshards %player% 500"
+      - "xmas give %player% grinch_heart"
+      - "xmas give %player% santa_hat"
+      - "xmas give %player% north_star"
+      - "xmas book %player% snowstorm 3"
+    2:
+      - "addmoney %player% 10000000"
+      - "addshards %player% 250"
+      - "xmas give %player% candy_cane_sword"
+    3:
+      - "addmoney %player% 5000000"
+      - "addshards %player% 100"
+      - "xmas give %player% frost_wand"
+      - "xmas give %player% eggnog_flask"
+      - "xmas book %player% frostguard 3"
+      - "xmas give %player% frosty_coal"
